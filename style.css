@@ -1,0 +1,106 @@
+.container {display: grid;}
+        
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: gray;
+}
+
+header, nav, main, section, footer {
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    background-color: #f9f9f9;
+}
+
+header, footer {
+    grid-column-start: 1;
+    grid-column-end: 12;
+}
+
+p {text-align: justify;}
+
+/* Definindo as características do menu */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+nav ul li {
+    display: inline;
+    margin-right: 10px;
+}
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    padding: 8px 16px;
+    border: 1px solid gray;
+}
+
+a:hover {/*mudando a cor do elemento 'a' quando o cursor estiver em cima dele*/
+    background-color: gray;
+    color: white;
+}
+/**/
+
+.img_pessoal {
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+
+.principal {
+    grid-column-start: 2;
+    grid-column-end: 10;
+}
+
+/*formulário para contato*/
+form {
+    margin-top: 20px;
+}
+label {
+    display: block;
+    margin-bottom: 10px;
+}
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+input[type="submit"] {
+    background-color: blue;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+input[type="submit"]:hover {
+    background-color: rgb(117, 117, 221);
+}
+/**/
+
+/* redefinindo as características das páginas para dispositivos móveis */
+@media only screen and (max-width: 767px /*largura maxima*/){
+    .img_pessoal {
+        grid-column-start: 1;
+        grid-column-end: 1;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .principal {
+        grid-column-start: 1;
+        grid-column-end: 1;
+    }
+
+    nav ul li {
+        display: grid;
+        margin-right: 10px;
+        padding: 8px 16px;
+    }
+}
